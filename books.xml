@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><jaxbBooksList>
+    <list id="1">
+        <author>Jane Austen</author>
+        <genre>romance</genre>
+        <price>25</price>
+        <quantity>10</quantity>
+        <title>Pride and prejudice</title>
+    </list>
+    <list id="2">
+        <author>Charlotte Brontë</author>
+        <genre>novel, romance</genre>
+        <price>25.0</price>
+        <quantity>0</quantity>
+        <title>Jane Eyre</title>
+    </list></jaxbBooksList>

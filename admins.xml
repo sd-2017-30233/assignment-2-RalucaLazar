@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jaxbAdminsList>
+    <list id="1">
+        <password>ion</password>
+        <username>ionescu.ion</username>
+    </list>
+    <list id="2">
+        <password>ana</password>
+        <username>marinescu.ana</username>
+    </list>
+</jaxbAdminsList>
