@@ -1,9 +1,6 @@
 package model;
 
-import Factory.ReportFactory;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import Factory.Factory;
 import service.AdminService;
 import service.BookService;
 import service.EmployeeService;
@@ -11,13 +8,6 @@ import service.EmployeeService;
 import javax.swing.*;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.xpath.XPathConstants;
-import java.io.File;
-import java.util.List;
 
 /**
  * Created by Raluca on 12.04.2017.
@@ -176,8 +166,8 @@ public class Administrator {
     }
 
     public void generateReport(String type,String name){
-        ReportFactory rp = new ReportFactory();
-        Report r = rp.makeReport(type,name);
+        Factory fr = new Factory();
+        Report r = fr.getFactory(type,name);
         r.generateReport();
         JOptionPane.showConfirmDialog(null,type+ " report generated.",
                 "", JOptionPane.OK_CANCEL_OPTION);

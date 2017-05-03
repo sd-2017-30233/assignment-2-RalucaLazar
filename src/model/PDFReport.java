@@ -19,7 +19,7 @@ public class PDFReport extends Report {
     BookService bs;
 
     public PDFReport(String name){
-        super(name);
+        this.name = name;
         bs = new BookService();
     }
 

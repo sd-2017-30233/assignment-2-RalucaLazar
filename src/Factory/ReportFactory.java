@@ -1,24 +1,12 @@
 package Factory;
 
-import model.Book;
-import model.CSVReport;
-import model.PDFReport;
 import model.Report;
 
-import java.util.List;
-
 /**
- * Created by Raluca on 17.04.2017.
+ * Created by Raluca on 29.04.2017.
  */
-
-public class ReportFactory {
-
-    public Report makeReport(String type,String name){
-        if(type.equals("PDF"))
-            return new PDFReport(name);
-        else if(type.equals("CSV"))
-            return new CSVReport(name);
-        else return null;
-    }
+public abstract class ReportFactory {
+    public String name;
+    public abstract Report generateReport();
 
 }

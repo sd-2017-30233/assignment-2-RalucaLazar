@@ -6,15 +6,18 @@ package GUI;
 
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import javax.swing.*;
 
 public class View extends JFrame {
 
-    public JPanel panel0;
-    public JPanel panel1;
-    public JPanel panel2;
-    public JPanel panel3;
-    public JPanel panel4;
+    public JLabel background;
+    public JLabel background1;
+    public JLabel background2;
+    public JLabel background3;
+    public JLabel background4;
     public JLabel welcomeLabel;
     public JLabel signInLabel;
     public JLabel usernameLabel;
@@ -63,28 +66,22 @@ public class View extends JFrame {
     public JLabel invalid;
     public JLabel invalid1;
 
+    public ImageIcon imageIcon;
+
 
     public View() {
         //construct preComponents
+        imageIcon = new ImageIcon("book.jpeg");
+        background=new JLabel(imageIcon);
+        background1=new JLabel(imageIcon);
+        background2=new JLabel(imageIcon);
+        background3=new JLabel(imageIcon);
+        background4=new JLabel(imageIcon);
 
-        panel0 = new JPanel();
-        panel1 = new JPanel();
-        panel2 = new JPanel();
-        panel3 = new JPanel();
-        panel4 = new JPanel();
-
-        panel0.setLayout (null);
-        panel1.setLayout (null);
-        panel2.setLayout (null);
-        panel3.setLayout (null);
-        panel4.setLayout (null);
-        panel0.setVisible (true);
-        panel1.setVisible (false);
-        panel2.setVisible (false);
-        panel3.setVisible (false);
-        panel4.setVisible (false);
-
-        panel0.setBackground(Color.lightGray);
+        background1.setVisible (false);
+        background2.setVisible (false);
+        background3.setVisible (false);
+        background4.setVisible(false);
 
         JMenu fileMenu = new JMenu ("File");
         JMenuItem exitItem = new JMenuItem ("Exit");
@@ -99,7 +96,10 @@ public class View extends JFrame {
         Font font = new Font("Serif",Font.BOLD + Font.ITALIC,50);
         Font font1 = new Font("Serif",Font.ITALIC,30);
 
-        welcomeLabel = new JLabel ("Welcome");
+        ImageIcon image = new ImageIcon("image.png");
+        welcomeLabel = new JLabel(image);
+
+        //welcomeLabel = new JLabel ("Welcome");
         okButton = new JButton ("Ok");
         okButton1 = new JButton ("Ok");
         okButton2 = new JButton ("Ok");
@@ -177,55 +177,55 @@ public class View extends JFrame {
         setLayout (null);
 
         //add components
-        panel0.add (welcomeLabel);
-        panel0.add (okButton);
-        panel0.add (jmenu);
-        panel0.add (combo);
+        background.add(welcomeLabel);
+        background.add(combo);
+        background.add(jmenu);
+        background.add(okButton);
 
-        panel1.add (okButton1);
-        panel1.add (backButton1);
-        panel1.add(signInLabel);
-        panel1.add(usernameLabel);
-        panel1.add(passwordLabel);
-        panel1.add(usernameTextField);
-        panel1.add(passwordField);
-        panel1.add(employeeLabel);
-        panel1.add(invalid);
+        background1.add (okButton1);
+        background1.add (backButton1);
+        background1.add(signInLabel);
+        background1.add(usernameLabel);
+        background1.add(passwordLabel);
+        background1.add(usernameTextField);
+        background1.add(passwordField);
+        background1.add(employeeLabel);
+        background1.add(invalid);
 
-        panel2.add (okButton2);
-        panel2.add (backButton2);
-        panel2.add(signInLabel1);
-        panel2.add(usernameLabel1);
-        panel2.add(passwordLabel1);
-        panel2.add(usernameTextField1);
-        panel2.add(passwordField1);
-        panel2.add(adminLabel);
-        panel2.add(invalid1);
+        background2.add (okButton2);
+        background2.add (backButton2);
+        background2.add(signInLabel1);
+        background2.add(usernameLabel1);
+        background2.add(passwordLabel1);
+        background2.add(usernameTextField1);
+        background2.add(passwordField1);
+        background2.add(adminLabel);
+        background2.add(invalid1);
 
-        panel3.add (performButton);
-        panel3.add (searchGenre);
-        panel3.add (searchTitle);
-        panel3.add (searchAuthor);
-        panel3.add (sellBook);
-        panel3.add (actionsLabel);
+        background3.add (performButton);
+        background3.add (searchGenre);
+        background3.add (searchTitle);
+        background3.add (searchAuthor);
+        background3.add (sellBook);
+        background3.add (actionsLabel);
 
-        panel4.add (performButton1);
-        panel4.add (addB);
-        panel4.add (viewB);
-        panel4.add (viewBs);
-        panel4.add (updateB);
-        panel4.add (deleteB);
-        panel4.add (addE);
-        panel4.add (viewE);
-        panel4.add (viewEs);
-        panel4.add (updateE);
-        panel4.add (deleteE);
-        panel4.add(generatePDF);
-        panel4.add(generateCSV);
-        panel4.add (actionsLabel1);
+        background4.add (performButton1);
+        background4.add (addB);
+        background4.add (viewB);
+        background4.add (viewBs);
+        background4.add (updateB);
+        background4.add (deleteB);
+        background4.add (addE);
+        background4.add (viewE);
+        background4.add (viewEs);
+        background4.add (updateE);
+        background4.add (deleteE);
+        background4.add(generatePDF);
+        background4.add(generateCSV);
+        background4.add (actionsLabel1);
 
         //set component bounds (only needed by Absolute Positioning)
-        welcomeLabel.setBounds (320, 70, 290, 70);
+        welcomeLabel.setBounds (0, 70, 800, 100);
         welcomeLabel.setForeground(Color.DARK_GRAY);
         welcomeLabel.setFont(font);
 
@@ -235,7 +235,7 @@ public class View extends JFrame {
         backButton1.setBounds (335, 305, 70, 30);
         backButton2.setBounds (335, 305, 70, 30);
         jmenu.setBounds (0, 0, 785, 25);
-        combo.setBounds (350, 220, 100, 25);
+        combo.setBounds (340, 250, 140, 25);
 
 
         signInLabel.setBounds (380, 70, 100, 50);
@@ -257,33 +257,34 @@ public class View extends JFrame {
         invalid1.setBounds (350, 260, 200, 25);
 
         performButton.setBounds (330, 370, 100, 25);
-        searchGenre.setBounds (315, 115, 300, 25);
-        searchTitle.setBounds (315, 150, 300, 25);
-        searchAuthor.setBounds (315, 185, 300, 25);
-        sellBook.setBounds(315,220,300,25);
-        actionsLabel.setBounds (340, 20, 100, 25);
+        searchGenre.setBounds (250, 115, 300, 25);
+        searchTitle.setBounds (250, 150, 300, 25);
+        searchAuthor.setBounds (250, 185, 300, 25);
+        sellBook.setBounds(250,220,300,25);
+        actionsLabel.setBounds (350, 40, 100, 25);
 
         actionsLabel1.setBounds (370, 40, 100, 25);
-        addB.setBounds (315, 75, 300, 25);
-        viewB.setBounds (315, 105, 300, 25);
-        viewBs.setBounds (315, 135, 300, 25);
-        updateB.setBounds (315, 165, 300, 25);
-        deleteB.setBounds (315, 195, 300, 25);
-        addE.setBounds (315, 225, 300, 25);
-        viewE.setBounds (315, 255, 300, 25);
-        viewEs.setBounds (315, 285, 300, 25);
-        updateE.setBounds (315, 315, 300, 25);
-        deleteE.setBounds(315,345,300,25);
-        generatePDF.setBounds(315,375,300,25);
-        generateCSV.setBounds(315,405,300,25);
+        addB.setBounds (250, 75, 300, 25);
+        viewB.setBounds (250, 105, 300, 25);
+        viewBs.setBounds (250, 135, 300, 25);
+        updateB.setBounds (250, 165, 300, 25);
+        deleteB.setBounds (250, 195, 300, 25);
+        addE.setBounds (250, 225, 300, 25);
+        viewE.setBounds (250, 255, 300, 25);
+        viewEs.setBounds (250, 285, 300, 25);
+        updateE.setBounds (250, 315, 300, 25);
+        deleteE.setBounds(250,345,300,25);
+        generatePDF.setBounds(250,375,300,25);
+        generateCSV.setBounds(250,405,300,25);
         performButton1.setBounds (345, 445, 100, 25);
 
+
         this.setJMenuBar(jmenu);
-        this.setTitle("BankAccounts");
+        this.setTitle("Book store");
         this.setPreferredSize (new Dimension (784, 600));
         this.setResizable(false);
         this.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
-        this.setContentPane(panel0);
+        this.setContentPane(background);
         this.pack();
         this.setVisible (true);
     }

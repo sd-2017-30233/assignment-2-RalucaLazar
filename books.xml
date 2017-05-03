@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><jaxbBooksList>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jaxbBooksList>
     <list id="1">
         <author>Jane Austen</author>
         <genre>romance</genre>
-        <price>25</price>
+        <price>25.0</price>
         <quantity>10</quantity>
         <title>Pride and prejudice</title>
     </list>
@@ -12,4 +13,61 @@
         <price>25.0</price>
         <quantity>0</quantity>
         <title>Jane Eyre</title>
-    </list></jaxbBooksList>
+    </list>
+    <list id="3">
+        <author>Ben Carson</author>
+        <genre>biograpfy</genre>
+        <price>10.0</price>
+        <quantity>5</quantity>
+        <title>Gifted Hands</title>
+    </list>
+    <list id="4">
+        <author>Jane Austen</author>
+        <genre>novel, romance</genre>
+        <price>25.0</price>
+        <quantity>0</quantity>
+        <title>Sense and sensibility</title>
+    </list>
+    <list id="5">
+        <author>Jane Austen</author>
+        <genre>romance</genre>
+        <price>35.0</price>
+        <quantity>20</quantity>
+        <title>Emma</title>
+    </list>
+    <list id="6">
+        <author>Thomas Hardy</author>
+        <genre>novel</genre>
+        <price>25.0</price>
+        <quantity>0</quantity>
+        <title>Far from the Madding Crowd</title>
+    </list>
+    <list id="7">
+        <author>Camil Petrescu</author>
+        <genre>psychology, fiction</genre>
+        <price>25.0</price>
+        <quantity>1</quantity>
+        <title>Ultima noapte de dragoste, intaia noapte de razboi</title>
+    </list>
+    <list id="8">
+        <author>Colleen McCullough</author>
+        <genre>novel, romance</genre>
+        <price>50.0</price>
+        <quantity>20</quantity>
+        <title>Pasarea Spin</title>
+    </list>
+    <list id="9">
+        <author>Margaret Mitchell</author>
+        <genre>novel, fiction</genre>
+        <price>45.0</price>
+        <quantity>10</quantity>
+        <title>Pe aripile vantului</title>
+    </list>
+    <list id="10">
+        <author>Antoine de Saint-Exupéry</author>
+        <genre>fiction</genre>
+        <price>25.0</price>
+        <quantity>0</quantity>
+        <title>Micul print</title>
+    </list>
+</jaxbBooksList>

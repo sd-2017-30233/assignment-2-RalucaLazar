@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><jaxbEmployeesList>
     <list id="1">
         <name>Popescu Alexandru</name>
-        <password>popescu</password>
-        <username>popescu</username>
+        <password>anonim</password>
+        <username>anonim</username>
     </list>
     <list id="2">
         <name>Pop Andreea</name>
         <password>andreea</password>
         <username>andreea</username>
     </list>
-    <list id="3">
-        <name>Popa Ana</name>
-        <password>anamaria</password>
-        <username>anamaria</username>
-    </list>
-    </jaxbEmployeesList>
+</jaxbEmployeesList>

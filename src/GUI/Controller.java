@@ -34,14 +34,14 @@ public class Controller {
             String comboBox = (String) view.combo.getSelectedItem();
             switch (comboBox) {
                 case "Employee": {
-                    view.panel1.setVisible (true);
-                    view.setContentPane(view.panel1);
+                    view.background1.setVisible (true);
+                    view.setContentPane(view.background1);
                     view.pack();
                 }
                 break;
                 case "Administrator": {
-                    view.panel2.setVisible (true);
-                    view.setContentPane(view.panel2);
+                    view.background2.setVisible (true);
+                    view.setContentPane(view.background2);
                     view.pack();
                 }
             }
@@ -57,8 +57,8 @@ public class Controller {
             registeredEmployee.setPassword(password);
             try {
                 if(registeredEmployee.verify(username,password)){
-                    view.panel3.setVisible(true);
-                    view.setContentPane(view.panel3);
+                    view.background3.setVisible(true);
+                    view.setContentPane(view.background3);
                     view.pack();
                 }
                 else view.invalid.setVisible(true);
@@ -78,8 +78,8 @@ public class Controller {
             registeredAdmin.setPassword(view.passwordField1.getText());
             try {
                 if(registeredAdmin.verify(username,password)) {
-                    view.panel4.setVisible(true);
-                    view.setContentPane(view.panel4);
+                    view.background4.setVisible(true);
+                    view.setContentPane(view.background4);
                     view.pack();
                 }
                 else view.invalid1.setVisible(true);
@@ -92,8 +92,8 @@ public class Controller {
 
     class BackListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
-            view.panel0.setVisible (true);
-            view.setContentPane(view.panel0);
+            view.background.setVisible (true);
+            view.setContentPane(view.background);
             view.pack();
         }
     }

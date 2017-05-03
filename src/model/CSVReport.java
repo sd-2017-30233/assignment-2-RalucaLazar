@@ -16,7 +16,7 @@ public class CSVReport extends Report {
     BookService bs;
 
     public CSVReport(String name){
-        super(name);
+        this.name = name;
         bs = new BookService();
     }
 
