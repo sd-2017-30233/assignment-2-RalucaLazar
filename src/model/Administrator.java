@@ -1,6 +1,6 @@
 package model;
 
-import Factory.Factory;
+import factory.Factory;
 import service.AdminService;
 import service.BookService;
 import service.EmployeeService;
